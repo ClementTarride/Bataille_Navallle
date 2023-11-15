@@ -17,3 +17,14 @@ def affichage(A):
         a = a + '\n'
     print(a)
     
+def sendMissileAt(rowIndex,columnIndex):
+    if grid[rowIndex][columnIndex] == 'b' :
+        grid[rowIndex][columnIndex] =  'h'
+        return True
+    elif grid[rowIndex][columnIndex] == '' :
+        grid[rowIndex][columnIndex] = 'm'
+        return False
+    else :
+        print("La case a déja été touché")
+        return False
+    
